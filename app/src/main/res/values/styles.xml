@@ -4,7 +4,7 @@
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
@@ -15,6 +15,10 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
     <style name="switch_text_appearance" parent="@android:style/TextAppearance.Holo.Small">
@@ -85,5 +89,9 @@
     <!-- Customize YOUR_CUSTOM_THEME Styles -->
     <!-- Define your own styles below. -->
     <!-- =============================================================== -->
+
+    <style name="Widget.AppCompat.ListView.MyOwn" parent="Widget.AppCompat.ListView">
+        <item name="android:groupIndicator"/>
+        </style>
 
 </resources>

@@ -13,8 +13,7 @@ public class Utils {
         sTheme = theme;
         activity.finish();
         activity.startActivity(new Intent(activity, activity.getClass()));
-        activity.overridePendingTransition(android.R.anim.fade_in,
-                android.R.anim.fade_out);
+        activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public static void onActivityCreateSetTheme(Activity activity) {
