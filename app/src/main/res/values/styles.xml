@@ -90,8 +90,18 @@
     <!-- Define your own styles below. -->
     <!-- =============================================================== -->
 
-    <style name="Widget.AppCompat.ListView.MyOwn" parent="Widget.AppCompat.ListView">
-        <item name="android:groupIndicator"/>
-        </style>
+    <style name="Widget.ExpandableListView" parent="Widget.ListView">
+        <item name="groupIndicator">@drawable/expander_group</item>
+        <item name="indicatorLeft">?attr/expandableListPreferredItemIndicatorLeft</item>
+        <item name="indicatorRight">?attr/expandableListPreferredItemIndicatorRight</item>
+        <item name="childDivider">@drawable/divider_horizontal_dark_opaque</item>
+        <item name="expandableListViewStyle">@style/MyExpandableListView</item>
+    </style>
+
+    <style name="MyExpandableListView" parent="Widget.ExpandableListView">
+        <item name="groupIndicator">@drawable/expander_group</item>
+        <item name="childDivider">@drawable/divider_horizontal_dark_opaque</item>
+    </style>
+
 
 </resources>
